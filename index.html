@@ -2,24 +2,95 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tra cứu Sóc Trăng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tra cứu hợp đồng - Sóc Trăng</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
+    body { 
+      margin: 0; padding: 20px; height: 100vh;
+      background: linear-gradient(135deg, #d9fdd3, #f9f9f9);
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
-    iframe {
-      width: 100%;
-      height: 90%;
+
+    .logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 22px;
+      margin-bottom: 10px;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    .message {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 30px;
+      padding: 0 10px;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .button {
+      background-color: #7CFC00;
+      color: white;
+      padding: 16px 24px;
+      font-size: 20px;
       border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      width: 90%;
+      max-width: 300px;
+      transition: background 0.3s, transform 0.2s;
+      animation: fadeInUp 2.5s ease forwards;
+    }
+
+    .button:hover {
+      background-color: #66cc00;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
   </style>
+  <script>
+    function goToApp() {
+      window.location.href = "https://www.appsheet.com/start/ca0aa1e8-4cdf-4070-8836-b898540477d5";
+    }
+  </script>
 </head>
 <body>
-  <!-- Phần tiêu đề nằm trên iframe -->
-    <h3 style="color:red;"> TỪ NGÀY 25/04/2025, AE ĐĂNG KÝ CUỐC XE HỢP ĐỒNG TRÊN APP 100%</h3>
-  </div>  <iframe src="https://www.appsheet.com/start/ca0aa1e8-4cdf-4070-8836-b898540477d5" allowfullscreen></iframe>
+
+  <!-- Logo -->
+  <img src="logo.png" alt="Logo Nam Thắng" class="logo">
+
+  <!-- Tiêu đề -->
+  <h2>Tra cứu hợp đồng - Sóc Trăng</h2>
+
+  <!-- Thông báo -->
+  <div class="message">Hãy bấm vào nút "Truy cập Ứng dụng" bên dưới để tiếp tục.<br>Khi tạo hợp đồng nhớ kiểm tra đầy đủ thông tin trước khi bấm lưu.</br></div>
+
+  <!-- Nút truy cập -->
+  <button class="button" onclick="goToApp()">Truy cập Ứng dụng</button>
+
 </body>
 </html>
