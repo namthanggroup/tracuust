@@ -3,17 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tra cứu hợp đồng - Sóc Trăng,Hậu Giang,Cần Thơ</title>
+
+  <title>Thông báo chuyển máy chủ - An Giang</title>
+
   <style>
-    body { 
-      margin: 0; padding: 20px; height: 100vh;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      min-height: 100vh;
       background: linear-gradient(135deg, #d9fdd3, #f9f9f9);
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 520px;
+      padding: 30px 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+      animation: fadeIn 0.8s ease forwards;
     }
 
     .logo {
@@ -24,90 +41,126 @@
     }
 
     h2 {
-      color: #2c3e50;
-      font-size: 22px;
-      margin-bottom: 10px;
-      animation: fadeIn 1.5s ease forwards;
+      color: #216b36;
+      font-size: 23px;
+      line-height: 1.4;
+      margin: 0 0 20px;
     }
 
     .message {
-      color: #555;
+      color: #444;
       font-size: 18px;
-      margin-bottom: 30px;
-      padding: 0 10px;
-      animation: fadeIn 2s ease forwards;
+      line-height: 1.7;
+      margin-bottom: 25px;
     }
 
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      width: 90%;
-      max-width: 300px;
+    .message strong {
+      color: #d63031;
+    }
+
+    .link {
+      color: #087f23;
+      font-weight: bold;
+      word-break: break-word;
+    }
+
+    .contact {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid #ddd;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.5;
     }
 
     .button {
-      background-color: #7CFC00;
+      display: inline-block;
+      width: 90%;
+      max-width: 320px;
+      padding: 16px 20px;
+      background-color: #28a745;
       color: white;
-      padding: 16px 24px;
-      font-size: 20px;
+      font-size: 19px;
+      font-weight: bold;
       border: none;
       border-radius: 12px;
       text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
-      animation: fadeInUp 2.5s ease forwards;
       cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     .button:hover {
-      background-color: #66cc00;
-      transform: scale(1.05);
+      background-color: #218838;
+      transform: scale(1.03);
     }
 
     @keyframes fadeInDown {
-      0% { opacity: 0; transform: translateY(-30px); }
-      100% { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-25px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px;
+      }
+
+      .message {
+        font-size: 17px;
+      }
+
+      .container {
+        padding: 25px 15px;
+      }
     }
   </style>
-
-  <script>
-    function goToServer1() {
-      window.location.href = "https://www.appsheet.com/start/4047e619-7c09-444b-9ff0-1466daa3f808";
-    }
-
-    function goToServer2() {
-      window.location.href = "https://tracuu.taxinamthang.vn"; // Thay link Appsheet thứ 2 vào đây
-    }
-  </script>
 </head>
 
 <body>
-  <!-- Logo -->
-  <img src="logo.png" alt="Logo Nam Thắng" class="logo">
+  <main class="container">
 
-  <!-- Tiêu đề -->
-  <h2>THÔNG BÁO CHUYỂN MÁY CHỦ DÙNG 1 LINK CHUNG</h2>
+    <img src="logo.png" alt="Logo Nam Thắng" class="logo">
 
-  <!-- Thông báo -->
-  <div class="message">
-    Ngày 7/9/2026, Máy chủ 1 sẽ được đóng<br>
-    Anh/Chị/Em vui lòng truy cập máy chủ Beta hoặc lưu link dùng chung tracuu.taxinamthang.vn
-  </div>
+    <h2>THÔNG BÁO CHUYỂN MÁY CHỦ<br>DÙNG MỘT LINK CHUNG</h2>
 
-  <!-- Hai nút truy cập -->
-  <div class="button-container">
-    <button class="button" onclick="goToServer1()">Máy chủ 1</button>
-    <button class="button" onclick="goToServer2()">Máy chủ mới (Beta)</button>
-  </div>
+    <div class="message">
+      <strong>Ngày 07/09/2026, Máy chủ 1 đã đóng lại.</strong>
+      <br><br>
+
+      Anh/Chị/Em vui lòng truy cập và lưu link dùng chung:
+      <br>
+
+      <span class="link">tracuu.taxinamthang.vn</span>
+
+      <div class="contact">
+        Mọi thắc mắc liên quan đến App, vui lòng liên hệ
+        <strong>IT hoặc Checker</strong>.
+      </div>
+    </div>
+
+    <a
+      href="https://tracuu.taxinamthang.vn"
+      class="button"
+    >
+      Truy cập App tra cứu
+    </a>
+
+  </main>
 </body>
 </html>
