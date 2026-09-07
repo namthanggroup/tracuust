@@ -27,7 +27,7 @@
       width: 100%;
       max-width: 520px;
       padding: 30px 20px;
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.95);
       border-radius: 18px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
       animation: fadeIn 0.8s ease forwards;
@@ -41,24 +41,25 @@
     }
 
     h2 {
+      margin: 0 0 20px;
       color: #216b36;
       font-size: 23px;
       line-height: 1.4;
-      margin: 0 0 20px;
     }
 
     .message {
+      margin-bottom: 20px;
       color: #444;
       font-size: 18px;
       line-height: 1.7;
-      margin-bottom: 25px;
     }
 
-    .message strong {
+    .important {
       color: #d63031;
+      font-weight: bold;
     }
 
-    .link {
+    .new-link {
       color: #087f23;
       font-weight: bold;
       word-break: break-word;
@@ -71,6 +72,22 @@
       color: #555;
       font-size: 16px;
       line-height: 1.5;
+    }
+
+    .countdown {
+      margin: 20px 0;
+      padding: 12px;
+      background-color: #f0fff0;
+      color: #216b36;
+      font-size: 16px;
+      border: 1px solid #b7e4c7;
+      border-radius: 10px;
+    }
+
+    #seconds {
+      color: #d63031;
+      font-size: 22px;
+      font-weight: bold;
     }
 
     .button {
@@ -117,6 +134,10 @@
     }
 
     @media (max-width: 480px) {
+      .container {
+        padding: 25px 15px;
+      }
+
       h2 {
         font-size: 20px;
       }
@@ -125,28 +146,62 @@
         font-size: 17px;
       }
 
-      .container {
-        padding: 25px 15px;
+      .button {
+        font-size: 17px;
       }
     }
   </style>
+
+  <script>
+    const newServerUrl = "https://tracuu.taxinamthang.vn";
+    let secondsRemaining = 10;
+
+    function startRedirectCountdown() {
+      const secondsElement = document.getElementById("seconds");
+
+      const countdownTimer = setInterval(function () {
+        secondsRemaining--;
+        secondsElement.textContent = secondsRemaining;
+
+        if (secondsRemaining <= 0) {
+          clearInterval(countdownTimer);
+          window.location.replace(newServerUrl);
+        }
+      }, 1000);
+    }
+
+    window.addEventListener("DOMContentLoaded", startRedirectCountdown);
+  </script>
 </head>
 
 <body>
   <main class="container">
 
-    <img src="logo.png" alt="Logo Nam Thắng" class="logo">
+    <img
+      src="logo.png"
+      alt="Logo Nam Thắng"
+      class="logo"
+    >
 
-    <h2>THÔNG BÁO CHUYỂN MÁY CHỦ<br>DÙNG MỘT LINK CHUNG</h2>
+    <h2>
+      THÔNG BÁO CHUYỂN MÁY CHỦ<br>
+      DÙNG MỘT LINK CHUNG
+    </h2>
 
     <div class="message">
-      <strong>Ngày 07/09/2026, Máy chủ 1 đã đóng lại.</strong>
-      <br><br>
+      <div class="important">
+        Ngày 07/09/2026, Máy chủ 1 sẽ được đóng.
+      </div>
 
-      Anh/Chị/Em vui lòng truy cập và lưu link dùng chung:
       <br>
 
-      <span class="link">tracuu.taxinamthang.vn</span>
+      Anh/Chị/Em vui lòng truy cập và lưu link dùng chung:
+
+      <br>
+
+      <span class="new-link">
+        tracuu.taxinamthang.vn
+      </span>
 
       <div class="contact">
         Mọi thắc mắc liên quan đến App, vui lòng liên hệ
@@ -154,11 +209,16 @@
       </div>
     </div>
 
+    <div class="countdown">
+      Hệ thống sẽ tự động chuyển sang máy chủ mới sau
+      <span id="seconds">10</span> giây.
+    </div>
+
     <a
       href="https://tracuu.taxinamthang.vn"
       class="button"
     >
-      Truy cập App tra cứu
+      Truy cập App ngay
     </a>
 
   </main>
